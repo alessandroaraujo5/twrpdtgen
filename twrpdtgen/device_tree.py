@@ -19,11 +19,11 @@ from twrpdtgen import __version__ as version
 from twrpdtgen.templates import render_template
 from typing import List
 
-BUILDPROP_LOCATIONS = [Path() / "default.prop",
+BUILDPROP_LOCATIONS = [Path() / "prop.default",
                        Path() / "prop.default",]
-BUILDPROP_LOCATIONS += [Path() / dir / "build.prop"
+BUILDPROP_LOCATIONS += [Path() / dir / "prop.default"
                         for dir in ["system", "vendor"]]
-BUILDPROP_LOCATIONS += [Path() / dir / "etc" / "build.prop"
+BUILDPROP_LOCATIONS += [Path() / dir / "etc" / "prop.default"
                         for dir in ["system", "vendor"]]
 
 FSTAB_LOCATIONS = [Path() / "etc" / "recovery.fstab"]
